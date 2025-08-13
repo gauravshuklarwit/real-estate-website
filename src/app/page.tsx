@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
+import { BrandsSection } from "@/components/brands-section";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
             <HeroSection />
           </div>
         </div>
+
+        <BrandsSection />
       </main>
     </>
   );
