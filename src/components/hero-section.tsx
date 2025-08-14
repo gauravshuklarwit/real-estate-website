@@ -20,8 +20,8 @@ export function HeroSection() {
       <div className="relative overflow-hidden">
         <div className="container grid gap-8 py-9 lg:grid-cols-[60%_auto] lg:pt-7 lg:pb-11">
           {/* Text box */}
-          <div className="z-10 max-w-lg lg:max-w-2xl">
-            <h1 className="text-3xl leading-snug font-medium text-balance md:text-5xl xl:text-6xl">
+          <div className="z-10 max-w-lg content-center lg:max-w-2xl">
+            <h1 className="max-w-[20ch] text-3xl leading-snug font-medium text-balance sm:text-5xl xl:text-6xl">
               We Provide Architectural design and Construction
             </h1>
             <p className="text-muted-foreground mt-6 leading-loose lg:text-lg">
@@ -44,14 +44,14 @@ export function HeroSection() {
               alt="Architectural design illustration"
               width={594}
               height={903}
-              className="z-10 lg:absolute lg:top-0 lg:left-[60%]"
+              className="z-10 xl:absolute xl:top-0 xl:left-[60%]"
             />
           </div>
         </div>
       </div>
 
       <div className="relative overflow-hidden">
-        <div className="container grid gap-12 xl:grid-cols-2">
+        <div className="container grid gap-12 py-4 xl:grid-cols-2 xl:py-0">
           {/* Stats list */}
           <ul className="flex flex-col items-center gap-13 sm:flex-row sm:items-start">
             {stats.map((stat) => {
@@ -70,7 +70,7 @@ export function HeroSection() {
           </ul>
 
           {/* Floating box */}
-          <div className="flex flex-col gap-6 bg-gradient-to-b from-[#2A92CD] to-[#003756] px-8 py-9 sm:flex-row sm:gap-10 sm:bg-gradient-to-r xl:z-20 xl:w-[50vw]">
+          <div className="flex flex-col gap-6 bg-gradient-to-b from-[#2A92CD] to-[#003756] px-8 py-9 sm:flex-row sm:gap-10 sm:bg-gradient-to-r xl:w-[50vw]">
             <div>
               <span>General</span>
               <p className="mt-2 text-xl font-semibold">Project</p>
@@ -87,7 +87,7 @@ export function HeroSection() {
               <p className="mt-2 text-2xl font-semibold">Operated</p>
             </div>
 
-            <p className="text-sm/loose xl:max-w-[35ch]">
+            <p className="max-w-[65ch] text-sm/loose xl:max-w-[35ch]">
               As a trusted general project that has been operating for 25 years,
               our commitment is always to prioritize our client satisfaction
             </p>
