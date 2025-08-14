@@ -14,9 +14,9 @@ const stats: StatItem[] = [
   { quantity: 20, description: "Awards Winning" },
 ];
 
-export function HeroSection() {
+export function HeroSection({ className }: { className?: string }) {
   return (
-    <section>
+    <section className={cn(className)}>
       <div className="relative overflow-hidden">
         <div className="container grid gap-8 py-9 lg:grid-cols-[60%_auto] lg:pt-7 lg:pb-11">
           {/* Text box */}
