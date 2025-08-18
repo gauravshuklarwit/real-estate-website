@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface StatItem {
   quantity?: number;
@@ -16,12 +17,17 @@ const stats: StatItem[] = [
 
 export function HeroSection({ className }: { className?: string }) {
   return (
-    <section className={cn(className)}>
-      <div className="relative overflow-hidden">
+    <section
+      className={cn(
+        "text-background bg-gradient-to-br from-[#464646] to-[#222222] pt-18 md:pt-22 lg:pt-38",
+        className,
+      )}
+    >
+      <div className="relative mx-auto max-w-[90rem] overflow-hidden">
         <div className="container grid gap-8 py-9 lg:grid-cols-[60%_auto] lg:pt-7 lg:pb-11">
           {/* Text box */}
           <div className="z-10 max-w-lg content-center lg:max-w-2xl">
-            <h1 className="max-w-[20ch] text-3xl leading-snug font-medium text-balance sm:text-5xl xl:text-6xl">
+            <h1 className="heading-1 max-w-[20ch] text-balance">
               We Provide Architectural design and Construction
             </h1>
             <p className="text-muted-foreground mt-6 leading-loose lg:text-lg">
@@ -29,12 +35,13 @@ export function HeroSection({ className }: { className?: string }) {
               The building owner chose us over other contractors in Jakarta,
               because our work is different
             </p>
-            <Link
-              href="#projects"
-              className="to-primary text-primary-foreground mt-8 inline-block bg-gradient-to-r from-[#5BB6EA] px-8 py-4 font-semibold transition-opacity hover:opacity-80 lg:px-10 lg:py-5"
+
+            <Button
+              asChild
+              className="to-primary mt-8 bg-gradient-to-r from-[#5BB6EA]"
             >
-              Discover More
-            </Link>
+              <Link href="#projects">Discover More</Link>
+            </Button>
           </div>
 
           {/* Image box */}
@@ -50,32 +57,29 @@ export function HeroSection({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="relative overflow-hidden">
-        <div className="container grid gap-12 py-4 xl:grid-cols-2 xl:py-0">
+      <div className="overflow-x-hidden">
+        <div className="container grid gap-12 py-4 xl:grid-cols-[45%_auto] xl:py-0">
           {/* Stats list */}
           <ul className="flex flex-col items-center gap-13 sm:flex-row sm:items-start">
-            {stats.map((stat) => {
-              return (
-                <li key={stat.description} className="text-center sm:text-left">
-                  <span className="text-4xl font-bold">
-                    {stat.quantity}
-                    <span className="text-primary">+</span>
-                  </span>
-                  <p className="text-muted-foreground mt-4 text-lg font-semibold sm:max-w-[7ch]">
-                    {stat.description}
-                  </p>
-                </li>
-              );
-            })}
+            {stats?.map((stat) => (
+              <li key={stat?.description} className="text-center sm:text-left">
+                <span className="text-4xl font-bold">
+                  {stat?.quantity}
+                  <span className="text-primary">+</span>
+                </span>
+                <p className="text-muted-foreground mt-4 text-lg font-semibold sm:max-w-[7ch]">
+                  {stat?.description}
+                </p>
+              </li>
+            ))}
           </ul>
 
           {/* Floating box */}
-          <div className="flex flex-col gap-6 bg-gradient-to-b from-[#2A92CD] to-[#003756] px-8 py-9 sm:flex-row sm:gap-10 sm:bg-gradient-to-r xl:w-[50vw]">
+          <div className="relative z-10 flex flex-col flex-wrap gap-6 px-8 py-9 after:absolute after:inset-0 after:-z-10 after:bg-gradient-to-b after:from-[#2A92CD] after:to-[#003756] after:content-[''] sm:flex-row sm:gap-10 lg:after:bg-gradient-to-r xl:after:w-[52vw]">
             <div>
               <span>General</span>
               <p className="mt-2 text-xl font-semibold">Project</p>
             </div>
-
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-4xl font-bold">25</span>
@@ -86,8 +90,7 @@ export function HeroSection({ className }: { className?: string }) {
               </div>
               <p className="mt-2 text-2xl font-semibold">Operated</p>
             </div>
-
-            <p className="max-w-[65ch] text-sm/loose xl:max-w-[35ch]">
+            <p className="flex-1 text-sm/loose">
               As a trusted general project that has been operating for 25 years,
               our commitment is always to prioritize our client satisfaction
             </p>

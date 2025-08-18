@@ -5,28 +5,45 @@
   --foreground: #242527;
   --primary: #2387c0;
   --primary-foreground: #ffffff;
+  --muted: #f8f8f8;
   --muted-foreground: #c4c4c4;
   --accent: #232d33;
 }
 
 @theme inline {
+  --font-sans: var(--font-poppins);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
+}
 
-  --font-sans: var(--font-poppins);
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .heading-1 {
+    @apply text-3xl leading-normal font-medium sm:text-5xl xl:text-6xl;
+  }
+
+  .heading-2 {
+    @apply text-2xl leading-normal font-semibold sm:text-4xl xl:text-5xl;
+  }
+
+  .paragraph {
+    @apply text-muted-foreground leading-relaxed font-medium lg:text-lg lg:leading-loose;
+  }
 }
 
 @layer utilities {
   .container {
-    @apply mx-auto max-w-[74rem] px-4 md:px-6;
+    @apply mx-auto max-w-[75rem] px-5 md:px-10;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
 }

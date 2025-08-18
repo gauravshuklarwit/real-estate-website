@@ -21,7 +21,7 @@ const navlinks: NavLink[] = [
   { label: "Contact us", link: "#contact" },
 ];
 
-export function Header() {
+export function Header({ className }: { className?: string }) {
   const [isMenuToggled, setIsmMenuToggled] = useState(false);
 
   const handleMobileNav = () => {
@@ -31,18 +31,24 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header>
+    <header
+      className={cn("absolute inset-x-0 top-0 z-50 bg-transparent", className)}
+    >
       <nav className="relative container flex items-center justify-between py-4 md:py-6 lg:py-8">
         {/* Logo */}
         <Link href="/" aria-label="Go to homepage" className="grid gap-1">
-          <span>General</span>
+          <span className="text-background">General</span>
           <span className="text-primary md:text-2xl md:font-bold">Project</span>
         </Link>
 
         {/* Nav toggler */}
         <button className="cursor-pointer lg:hidden" onClick={handleMobileNav}>
           <span className="sr-only">Toggle Mobile Menu</span>
-          {isMenuToggled ? <CloseIcon /> : <MenuIcon />}
+          {isMenuToggled ? (
+            <CloseIcon className="text-background" />
+          ) : (
+            <MenuIcon className="text-background" />
+          )}
         </button>
 
         {/* Navigation wrapper */}
@@ -58,18 +64,20 @@ export function Header() {
           <ul className="grid justify-items-center gap-3 px-4 py-8 lg:ml-auto lg:flex lg:gap-8 xl:gap-15">
             {navlinks.map((navLink) => {
               return (
-                <li key={navLink.label}>
-                  <Link
-                    href={navLink.link || "/"}
-                    className={cn(
-                      "text-muted-foreground hover:text-background transition-colors",
-                      {
-                        "text-background": navLink.link === pathname,
-                      },
-                    )}
-                  >
-                    {navLink.label}
-                  </Link>
+                <li key={navLink?.label}>
+                  {navLink?.label && (
+                    <Link
+                      href={navLink?.link || "/"}
+                      className={cn(
+                        "text-muted-foreground hover:text-background transition-colors",
+                        {
+                          "text-background": navLink?.link === pathname,
+                        },
+                      )}
+                    >
+                      {navLink.label}
+                    </Link>
+                  )}
                 </li>
               );
             })}
