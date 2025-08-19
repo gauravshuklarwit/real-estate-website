@@ -10,12 +10,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground hover:bg-primary/90 hover:outline-primary",
+          "bg-primary text-primary-foreground hover:bg-primary/90 hover:outline-primary drop-shadow-xl drop-shadow-primary/30",
         ghost: "hover:outline-none",
       },
       size: {
         default: "px-6 py-3 has-[>svg]:px-8 xl:px-10 xl:py-5",
-        icon: "p-4 hover:[&_svg]:translate-0 hover:outline-none",
+        icon: "p-4 hover:[&_svg]:translate-0 hover:outline-none drop-shadow-primary/10",
       },
     },
     defaultVariants: {
