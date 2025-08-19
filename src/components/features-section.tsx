@@ -43,7 +43,7 @@ export function FeaturesSection() {
           description="Check out our best service you can possibly orders in building your company and don't forget to ask via our email or our customer service if you are interested in using our services"
         />
 
-        <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-13 md:grid-cols-2 xl:grid-cols-4">
           {features?.map((feature) => {
             const Icon = feature?.icon;
 
@@ -55,7 +55,7 @@ export function FeaturesSection() {
                 <h3 className="mt-6.5 text-xl font-semibold sm:text-2xl md:mt-9">
                   {feature?.title}
                 </h3>
-                <p className="paragraph mt-6">{feature?.description}</p>
+                <p className="paragraph mt-3 lg:mt-6">{feature?.description}</p>
                 {Icon && (
                   <span className="bg-primary before:bg-primary/50 relative -order-1 grid aspect-square size-16 place-content-center rounded-full before:absolute before:inset-0 before:-z-10 before:size-full before:scale-125 before:rounded-full before:content-[''] md:size-18.5">
                     <Icon className="size-6 md:size-9" />
