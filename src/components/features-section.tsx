@@ -50,15 +50,15 @@ export function FeaturesSection() {
             return (
               <article
                 key={feature?.title}
-                className="flex flex-col max-md:items-center max-md:text-center"
+                className="group flex flex-col max-md:items-center max-md:text-center"
               >
                 <h3 className="mt-6.5 text-xl font-semibold sm:text-2xl md:mt-9">
                   {feature?.title}
                 </h3>
                 <p className="paragraph mt-3 lg:mt-6">{feature?.description}</p>
                 {Icon && (
-                  <span className="bg-primary before:bg-primary/50 relative -order-1 grid aspect-square size-16 place-content-center rounded-full before:absolute before:inset-0 before:-z-10 before:size-full before:scale-125 before:rounded-full before:content-[''] md:size-18.5">
-                    <Icon className="size-6 md:size-9" />
+                  <span className="bg-primary before:bg-primary/50 relative -order-1 grid aspect-square size-14 place-content-center rounded-full transition-all duration-200 group-hover:rotate-z-30 before:absolute before:inset-0 before:-z-10 before:size-full before:scale-125 before:rounded-full before:content-[''] sm:size-16 xl:size-18.5">
+                    <Icon className="size-6 xl:size-8" />
                   </span>
                 )}
               </article>
