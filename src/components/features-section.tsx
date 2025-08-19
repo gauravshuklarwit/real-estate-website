@@ -38,6 +38,7 @@ export function FeaturesSection() {
     <section className="py-16 lg:pt-41">
       <div className="container grid gap-20">
         <SectionIntro
+          bar
           title="What Make Us Different?"
           description="Check out our best service you can possibly orders in building your company and don't forget to ask via our email or our customer service if you are interested in using our services"
         />
