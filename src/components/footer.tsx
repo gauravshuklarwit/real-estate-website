@@ -115,7 +115,10 @@ export function Footer({ testimonials = false }: { testimonials?: boolean }) {
                 const Icon = social?.icon;
 
                 return (
-                  <li key={social?.platform}>
+                  <li
+                    key={social?.platform}
+                    className="transition-transform duration-200 hover:scale-110"
+                  >
                     <Link
                       href={social?.link || "/#"}
                       aria-label={`Visit our ${social?.platform} profile`}
@@ -210,7 +213,9 @@ function Menu({ title, links }: MenuProps) {
           <ul className="mt-5 grid gap-3 lg:mt-8 lg:gap-6">
             {links?.map((link) => (
               <li key={link.label}>
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href} className="hover:underline">
+                  {link.label}
+                </Link>
               </li>
             ))}
           </ul>
