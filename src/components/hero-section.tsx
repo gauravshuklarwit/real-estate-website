@@ -65,7 +65,7 @@ export function HeroSection({ className }: { className?: string }) {
       <div className="overflow-x-hidden">
         <div className="container grid gap-12 py-4 xl:grid-cols-[45%_auto] xl:py-0">
           {/* Stats list */}
-          <ul className="flex flex-col items-center gap-13 sm:flex-row sm:items-start">
+          <ul className="grid max-sm:gap-13 sm:grid-cols-3 sm:items-start">
             {stats?.map((stat) => (
               <li key={stat?.description} className="text-center sm:text-left">
                 <span className="text-4xl font-bold">
