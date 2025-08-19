@@ -44,13 +44,13 @@ const testimonials: Testimonial[] = [
     image: "/testimonials/alex-morgan.jpg",
     personName: "Alex Morgan",
     comment:
-      "We like the final result this project, in extraordinary and also provides the best service to the client ",
+      "Professional, reliable, and highly skilled. I would definitely recommend their services to anyone looking for quality results.",
   },
   {
     image: "/testimonials/elon-musk.jpg",
     personName: "Elon Musk",
     comment:
-      "We like the final result this project, in extraordinary and also provides the best service to the client ",
+      "Impressed by their attention to detail and commitment to excellence. The final outcome was exactly what we envisioned.",
   },
 ];
 
