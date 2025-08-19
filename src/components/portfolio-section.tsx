@@ -51,17 +51,16 @@ export function PortfolioSection() {
               key={project?.title}
               className="group relative lg:overflow-y-hidden"
             >
-              <div className="relative min-h-120">
+              <div className="relative min-h-120 overflow-hidden">
                 <Image
                   src={project?.image || "/placeholder.svg"}
                   alt={`${project?.title} image`}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-200 group-hover:scale-110"
                 />
               </div>
 
-              {/* Show on hover after lg devices */}
-              <div className="bg-background absolute inset-x-3 bottom-3 flex items-center justify-between gap-7 px-4 py-5 shadow transition-transform duration-200 group-hover:translate-y-0 lg:translate-y-[120%]">
+              <div className="bg-background absolute inset-x-3 bottom-3 flex items-center justify-between gap-7 px-4 py-5 shadow transition-transform duration-300 group-hover:translate-y-0 lg:translate-y-[120%]">
                 <div>
                   <h3 className="font-semibold">{project?.title}</h3>
                   <p className="text-muted-foreground text-xs">
