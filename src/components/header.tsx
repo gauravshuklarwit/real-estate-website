@@ -105,6 +105,7 @@ export function Header({ className }: { className?: string }) {
                           "text-background": navLink?.link === pathname,
                         },
                       )}
+                      onClick={handleMobileNav}
                     >
                       {navLink.label}
                     </Link>
