@@ -142,8 +142,8 @@ export function Footer({ testimonials = false }: { testimonials?: boolean }) {
 function Testimonials() {
   return (
     <Carousel>
-      <div className="mx-auto grid max-w-[66.5rem] gap-10 bg-gradient-to-br from-[#474747] to-[#222222] p-5 py-16 md:px-10 lg:grid-cols-2 xl:px-15">
-        <CarouselContent>
+      <div className="mx-auto grid max-w-[66.5rem] gap-10 bg-gradient-to-br from-[#474747] to-[#222222] p-5 py-16 md:px-10 lg:grid-cols-2 xl:gap-18 xl:px-15">
+        <CarouselContent className="h-full">
           {testimonials?.map((testimonial) => (
             <CarouselItem
               key={testimonial?.personName}
@@ -154,7 +154,7 @@ function Testimonials() {
                 alt={`${testimonial?.personName}'s avatar`}
                 width={269}
                 height={364}
-                className="w-full lg:max-h-3/4 lg:max-w-3/4 lg:object-cover"
+                className="w-full lg:h-4/5 lg:w-2/3 lg:object-cover"
               />
 
               <div className="bg-background relative grid justify-items-center px-5 pt-10 pb-4 text-center md:absolute md:right-0 md:bottom-0 md:mx-auto md:max-w-66">
