@@ -173,7 +173,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 
 function CarouselPrevious({
   className,
-  variant = "ghost",
+  variant = "default",
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
