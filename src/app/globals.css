@@ -23,6 +23,10 @@
 }
 
 @layer base {
+  html {
+    @apply antialiased motion-safe:scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
