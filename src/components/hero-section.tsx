@@ -52,10 +52,10 @@ export function HeroSection({ className }: { className?: string }) {
           {/* Image box */}
           <div className="-order-1 max-xl:mask-b-from-20% max-xl:mask-b-to-90% sm:hidden lg:order-1 lg:block">
             <Image
-              src="/architectural-design.svg"
+              src="/architectural-design.png"
               alt="Architectural design illustration"
-              width={594}
-              height={903}
+              width={698}
+              height={782}
               className="z-10 xl:absolute xl:top-0 xl:left-[60%]"
             />
           </div>
