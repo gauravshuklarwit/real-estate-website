@@ -1,19 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import CountUp from "react-countup";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 
 interface StatItem {
+  start?: number;
   quantity?: number;
   description?: string;
 }
 
 const stats: StatItem[] = [
-  { quantity: 300, description: "Happy Client" },
-  { quantity: 900, description: "Amazing Projects" },
-  { quantity: 20, description: "Awards Winning" },
+  { start: 200, quantity: 300, description: "Happy Client" },
+  { start: 800, quantity: 900, description: "Amazing Projects" },
+  { start: 10, quantity: 20, description: "Awards Winning" },
 ];
 
 export function HeroSection({ className }: { className?: string }) {
@@ -65,7 +69,12 @@ export function HeroSection({ className }: { className?: string }) {
             {stats?.map((stat) => (
               <li key={stat?.description} className="text-center sm:text-left">
                 <span className="text-4xl font-bold">
-                  {stat?.quantity}
+                  <CountUp
+                    start={stat?.start || 0}
+                    end={stat?.quantity || 0}
+                    duration={2.75}
+                    separator=","
+                  />
                   <span className="text-primary">+</span>
                 </span>
                 <p className="text-muted-foreground mt-4 text-lg font-semibold sm:max-w-[7ch]">
