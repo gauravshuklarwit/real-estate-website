@@ -126,7 +126,7 @@ export function Header({ className }: { className?: string }) {
                   <Link
                     href={navLink?.link || "/"}
                     className={cn(
-                      "text-muted-foreground hover:text-background transition-colors",
+                      "text-muted-foreground hover:text-background focus-within:text-background transition-colors",
                       {
                         "text-background": navLink?.link === pathname,
                       },
