@@ -145,7 +145,7 @@ export function Footer({ testimonials = false }: { testimonials?: boolean }) {
 function Testimonials() {
   return (
     <Carousel>
-      <div className="mx-auto grid max-w-[66.5rem] gap-10 bg-gradient-to-br from-[#474747] to-[#222222] p-5 py-16 md:px-10 lg:grid-cols-2 xl:gap-18 xl:px-15">
+      <div className="mx-auto grid max-w-[66.5rem] gap-13 bg-gradient-to-br from-[#474747] to-[#222222] p-5 py-16 md:px-10 lg:grid-cols-2 xl:gap-18 xl:px-15">
         <CarouselContent className="h-full">
           {testimonials?.map((testimonial) => (
             <CarouselItem
@@ -175,7 +175,12 @@ function Testimonials() {
           ))}
         </CarouselContent>
 
-        <div>
+        <div className="flex items-center justify-end gap-4 lg:hidden">
+          <CarouselPrevious className="static translate-y-0" />
+          <CarouselNext className="static translate-y-0" />
+        </div>
+
+        <div className="-order-1 lg:order-1">
           <h2 className="text-background text-2xl leading-normal font-semibold sm:text-3xl">
             What we have done & what our Customers say
           </h2>
@@ -186,7 +191,7 @@ function Testimonials() {
             our work perform.
           </p>
 
-          <div className="mt-12 flex items-center justify-end gap-4">
+          <div className="mt-12 flex items-center justify-end gap-4 max-lg:hidden">
             <CarouselPrevious className="static translate-y-0" />
             <CarouselNext className="static translate-y-0" />
           </div>
