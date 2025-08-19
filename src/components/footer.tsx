@@ -91,15 +91,15 @@ const menu2 = [
 
 export function Footer({ testimonials = false }: { testimonials?: boolean }) {
   return (
-    <footer className="grid gap-22 pt-18">
+    <footer className="grid pt-18">
       {testimonials && (
-        <div className="z-10 col-[1/-1] row-[1/3] overflow-x-hidden">
+        <div className="z-10 overflow-x-hidden xl:col-[1/-1] xl:row-[1/3]">
           <Testimonials />
         </div>
       )}
 
-      <div className="text-background col-[1/-1] row-[2/5] bg-gradient-to-br from-[#474747] to-[#222222] pt-110 pb-20 md:pt-120 lg:pt-110">
-        <div className="container grid gap-13 lg:grid-cols-[55%_auto] lg:gap-32">
+      <div className="text-background bg-gradient-to-br from-[#474747] to-[#222222] py-20 lg:py-34 xl:col-[1/-1] xl:row-[2/5] xl:pt-105">
+        <div className="container grid gap-13 md:gap-18 lg:grid-cols-[55%_auto] xl:gap-32">
           <div>
             <span className="font-semibold">General Project</span>
             <p className="mt-8 leading-loose">
@@ -129,7 +129,7 @@ export function Footer({ testimonials = false }: { testimonials?: boolean }) {
             </ul>
           </div>
 
-          <nav className="flex gap-10 lg:gap-22">
+          <nav className="flex gap-10 lg:gap-16 xl:gap-22">
             <Menu title="Company" links={menu1} />
             <Menu title="More" links={menu2} />
           </nav>
