@@ -43,7 +43,7 @@ export function HeroSection({ className }: { className?: string }) {
 
             <Button
               asChild
-              className="to-primary mt-8 bg-gradient-to-r from-[#5BB6EA]"
+              className="to-primary mt-8 bg-gradient-to-r from-[#5BB6EA] drop-shadow-sm"
             >
               <Link href="#projects">Discover More</Link>
             </Button>
