@@ -153,7 +153,7 @@ function Testimonials() {
           {testimonials?.map((testimonial) => (
             <CarouselItem
               key={testimonial?.personName}
-              className="relative grid items-start"
+              className="relative grid items-start max-md:content-start"
             >
               <Image
                 src={testimonial?.image || "/placeholder.svg"}
