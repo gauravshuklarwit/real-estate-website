@@ -24,7 +24,7 @@ export function HeroSection({ className }: { className?: string }) {
       )}
     >
       <div className="relative mx-auto max-w-[90rem] overflow-hidden">
-        <div className="container grid gap-8 py-9 lg:grid-cols-[60%_auto] lg:pt-7 lg:pb-11">
+        <div className="container grid py-9 lg:grid-cols-[60%_auto] lg:gap-8 lg:pt-7 lg:pb-11">
           {/* Text box */}
           <div className="z-10 max-w-lg content-center lg:max-w-2xl">
             <h1 className="heading-1 max-w-[20ch] text-balance">
@@ -45,7 +45,7 @@ export function HeroSection({ className }: { className?: string }) {
           </div>
 
           {/* Image box */}
-          <div className="-order-1 sm:hidden lg:order-1 lg:block">
+          <div className="-order-1 max-xl:mask-b-from-20% max-xl:mask-b-to-90% sm:hidden lg:order-1 lg:block">
             <Image
               src="/architectural-design.svg"
               alt="Architectural design illustration"
