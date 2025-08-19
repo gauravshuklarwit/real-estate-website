@@ -26,7 +26,10 @@ export function Card({
   ...props
 }: Props) {
   return (
-    <article className={cn("flex max-w-96 flex-col", className)} {...props}>
+    <article
+      className={cn("group flex max-w-96 flex-col", className)}
+      {...props}
+    >
       {date ? (
         <div className="mt-4 flex items-center gap-4 lg:mt-8">
           <div className="grid gap-1">
@@ -57,7 +60,7 @@ export function Card({
             src={image}
             alt={`${title} image`}
             fill
-            className="object-cover object-center"
+            className="object-cover object-center transition-transform duration-200 group-hover:scale-105"
           />
         </div>
       )}
