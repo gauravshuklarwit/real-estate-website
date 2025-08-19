@@ -42,7 +42,7 @@ const news: News[] = [
 
 export function NewsSection() {
   return (
-    <section className="py-16">
+    <section id="news-section" className="py-16">
       <div className="container grid gap-13">
         <SectionIntro title="News & Update" />
 

@@ -15,12 +15,12 @@ interface NavLink {
 
 const navlinks: NavLink[] = [
   { label: "Home", link: "/" },
-  { label: "Services", link: "#services" },
-  { label: "Find a Team", link: "#team" },
-  { label: "About Us", link: "#about" },
-  { label: "Articles", link: "#articles" },
-  { label: "Portfolio", link: "#portfolio" },
-  { label: "Contact us", link: "#contact" },
+  { label: "Services", link: "#services-section" },
+  { label: "Find a Team", link: "#architect-profile-section" },
+  { label: "About Us", link: "#our-story-section" },
+  { label: "Articles", link: "#news-section" },
+  { label: "Portfolio", link: "#portfolio-section" },
+  { label: "Contact us", link: "#footer-nav" },
 ];
 
 export function Header({ className }: { className?: string }) {

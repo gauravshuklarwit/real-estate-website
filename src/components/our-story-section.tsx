@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function OurStorySection() {
   return (
-    <section className="py-16">
+    <section id="our-story-section" className="py-16">
       <div className="container grid grid-rows-2 gap-13 lg:grid-cols-2 lg:grid-rows-1">
         {/* Text box */}
         <div className="grid justify-items-center text-center md:justify-items-start md:text-left">

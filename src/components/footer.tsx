@@ -98,7 +98,10 @@ export function Footer({ testimonials = false }: { testimonials?: boolean }) {
         </div>
       )}
 
-      <div className="text-background bg-gradient-to-br from-[#474747] to-[#222222] py-20 lg:py-34 xl:col-[1/-1] xl:row-[2/5] xl:pt-105">
+      <nav
+        id="footer-nav"
+        className="text-background bg-gradient-to-br from-[#474747] to-[#222222] py-20 lg:py-34 xl:col-[1/-1] xl:row-[2/5] xl:pt-105"
+      >
         <div className="container grid gap-13 md:gap-18 lg:grid-cols-[55%_auto] xl:gap-32">
           <div>
             <span className="font-semibold">General Project</span>
@@ -129,12 +132,12 @@ export function Footer({ testimonials = false }: { testimonials?: boolean }) {
             </ul>
           </div>
 
-          <nav className="flex gap-10 lg:gap-16 xl:gap-22">
+          <div className="flex gap-10 lg:gap-16 xl:gap-22">
             <Menu title="Company" links={menu1} />
             <Menu title="More" links={menu2} />
-          </nav>
+          </div>
         </div>
-      </div>
+      </nav>
     </footer>
   );
 }

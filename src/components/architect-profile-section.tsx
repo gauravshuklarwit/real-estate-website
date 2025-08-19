@@ -6,7 +6,7 @@ import { Icons } from "@/components/icons";
 
 export function ArchitectProfileSection() {
   return (
-    <section className="py-16">
+    <section id="architect-profile-section" className="py-16">
       <div className="container grid gap-13 lg:grid-cols-[60%_auto]">
         <div className="relative grid md:grid-cols-4">
           <Image

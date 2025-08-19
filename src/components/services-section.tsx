@@ -30,7 +30,10 @@ const services: Service[] = [
 
 export function ServicesSection() {
   return (
-    <section className="bg-muted py-14 lg:py-20 lg:pt-20 lg:pb-18">
+    <section
+      id="services-section"
+      className="bg-muted py-14 lg:py-20 lg:pt-20 lg:pb-18"
+    >
       <div className="container grid gap-10 lg:gap-20">
         <SectionIntro
           title="Our Excellent Services"

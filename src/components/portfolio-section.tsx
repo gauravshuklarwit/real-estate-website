@@ -41,7 +41,7 @@ const projects: Project[] = [
 
 export function PortfolioSection() {
   return (
-    <section className="py-16">
+    <section id="portfolio-section" className="py-16">
       <div className="container grid gap-13">
         <SectionIntro title="Our collection best project" />
 
