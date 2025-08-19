@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface NavLink {
   label?: string;
@@ -41,35 +43,64 @@ export function Header({ className }: { className?: string }) {
           <span className="text-primary md:text-2xl md:font-bold">Project</span>
         </Link>
 
-        {/* Nav toggler */}
-        <button className="cursor-pointer lg:hidden" onClick={handleMobileNav}>
-          <span className="sr-only">Toggle Mobile Menu</span>
-          {isMenuToggled ? (
-            <CloseIcon className="text-background" />
-          ) : (
-            <MenuIcon className="text-background" />
-          )}
-        </button>
+        {/* Mobile navigation opener */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="pr-0 lg:hidden"
+          onClick={handleMobileNav}
+        >
+          <MenuIcon className="text-background" />
+        </Button>
 
-        {/* Navigation wrapper */}
-        <div
+        {/* Mobile navigation wrapper*/}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 50,
+            display: "none",
+          }}
+          animate={{
+            opacity: isMenuToggled ? 1 : 0,
+            y: isMenuToggled ? 0 : 50,
+            display: isMenuToggled ? "grid" : "none",
+          }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className={cn(
-            "bg-foreground absolute inset-x-0 top-full z-50 hidden lg:static lg:flex lg:bg-transparent",
+            "bg-foreground fixed inset-0 z-50 container hidden min-h-dvh items-start",
             {
               grid: isMenuToggled,
             },
           )}
         >
-          {/* Navigation Menu */}
-          <ul className="grid justify-items-center gap-3 px-4 py-8 lg:ml-auto lg:flex lg:gap-8 xl:gap-15">
-            {navlinks.map((navLink) => {
+          {/* Mobile navigation closer */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="my-4 self-start justify-self-end pr-0"
+            onClick={handleMobileNav}
+          >
+            <CloseIcon className="text-background" />
+          </Button>
+
+          {/* Mobile navigation menu */}
+          <ul className="grid justify-items-center gap-4">
+            {navlinks.map((navLink, idx) => {
               return (
-                <li key={navLink?.label}>
+                <motion.li
+                  key={navLink?.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: isMenuToggled ? 1 : 0,
+                    y: isMenuToggled ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.3, delay: idx * 0.08 }}
+                >
                   {navLink?.label && (
                     <Link
                       href={navLink?.link || "/"}
                       className={cn(
-                        "text-muted-foreground hover:text-background transition-colors",
+                        "text-muted-foreground hover:text-background text-xl transition-colors sm:text-2xl",
                         {
                           "text-background": navLink?.link === pathname,
                         },
@@ -78,11 +109,34 @@ export function Header({ className }: { className?: string }) {
                       {navLink.label}
                     </Link>
                   )}
-                </li>
+                </motion.li>
               );
             })}
           </ul>
-        </div>
+        </motion.div>
+
+        {/* Desktop navigation */}
+        <ul className="ml-auto hidden items-center gap-8 px-4 py-8 lg:flex xl:gap-15">
+          {navlinks.map((navLink) => {
+            return (
+              <li key={navLink?.label}>
+                {navLink?.label && (
+                  <Link
+                    href={navLink?.link || "/"}
+                    className={cn(
+                      "text-muted-foreground hover:text-background transition-colors",
+                      {
+                        "text-background": navLink?.link === pathname,
+                      },
+                    )}
+                  >
+                    {navLink.label}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </nav>
     </header>
   );
