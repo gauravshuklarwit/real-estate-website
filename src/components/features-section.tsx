@@ -48,7 +48,10 @@ export function FeaturesSection() {
             const Icon = feature?.icon;
 
             return (
-              <article key={feature?.title} className="flex flex-col">
+              <article
+                key={feature?.title}
+                className="flex flex-col max-md:items-center max-md:text-center"
+              >
                 <h3 className="mt-6.5 text-xl font-semibold sm:text-2xl md:mt-9">
                   {feature?.title}
                 </h3>
