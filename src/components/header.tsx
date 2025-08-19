@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/icons";
 
 interface NavLink {
   label?: string;
@@ -50,7 +51,7 @@ export function Header({ className }: { className?: string }) {
           className="pr-0 lg:hidden"
           onClick={handleMobileNav}
         >
-          <MenuIcon className="text-background" />
+          <Icons.menu className="text-background size-6" />
         </Button>
 
         {/* Mobile navigation wrapper*/}
@@ -80,7 +81,7 @@ export function Header({ className }: { className?: string }) {
             className="my-4 self-start justify-self-end pr-0"
             onClick={handleMobileNav}
           >
-            <CloseIcon className="text-background" />
+            <Icons.cross className="text-background size-6" />
           </Button>
 
           {/* Mobile navigation menu */}
@@ -140,43 +141,5 @@ export function Header({ className }: { className?: string }) {
         </ul>
       </nav>
     </header>
-  );
-}
-
-function MenuIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className={cn("size-6", className)}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 9h16.5m-16.5 6.75h16.5"
-      />
-    </svg>
-  );
-}
-
-function CloseIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className={cn("size-6", className)}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6 18 18 6M6 6l12 12"
-      />
-    </svg>
   );
 }
