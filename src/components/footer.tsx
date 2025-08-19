@@ -41,14 +41,14 @@ const testimonials: Testimonial[] = [
       "We like the final result this project, in extraordinary and also provides the best service to the client ",
   },
   {
-    image: "/testimonials/jacob-molen.jpg",
-    personName: "Tim Molen",
+    image: "/testimonials/alex-morgan.jpg",
+    personName: "Alex Morgan",
     comment:
       "We like the final result this project, in extraordinary and also provides the best service to the client ",
   },
   {
-    image: "/testimonials/jacob-molen.jpg",
-    personName: "Joe Molen",
+    image: "/testimonials/elon-musk.jpg",
+    personName: "Elon Musk",
     comment:
       "We like the final result this project, in extraordinary and also provides the best service to the client ",
   },
@@ -147,14 +147,14 @@ function Testimonials() {
           {testimonials?.map((testimonial) => (
             <CarouselItem
               key={testimonial?.personName}
-              className="relative grid"
+              className="relative grid items-start"
             >
               <Image
                 src={testimonial?.image || "/placeholder.svg"}
                 alt={`${testimonial?.personName}'s avatar`}
                 width={269}
                 height={364}
-                className="w-full lg:h-4/5 lg:w-2/3 lg:object-cover"
+                className="aspect-square w-full object-cover lg:h-4/5 lg:w-2/3"
               />
 
               <div className="bg-background relative grid justify-items-center px-5 pt-10 pb-4 text-center md:absolute md:right-0 md:bottom-0 md:mx-auto md:max-w-66">
