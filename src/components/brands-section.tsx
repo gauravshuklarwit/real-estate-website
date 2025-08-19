@@ -18,7 +18,7 @@ export function BrandsSection() {
   return (
     <section>
       <div className="container py-14">
-        <Marquee>
+        <Marquee className="mask-x-from-90% mask-x-to-100%">
           <ul className="flex items-center">
             {brands?.map((brand) => (
               <li key={brand?.name}>
