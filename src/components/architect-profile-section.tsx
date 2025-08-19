@@ -45,10 +45,10 @@ export function ArchitectProfileSection() {
             <Button asChild>
               <Link href="/">See all team</Link>
             </Button>
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="group">
               <Link href="/">
                 How it works
-                <Icons.arrowRight className="hover:fill-background" />
+                <Icons.arrowRight className="hover:fill-background transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
