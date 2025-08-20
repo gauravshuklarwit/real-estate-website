@@ -1,3 +1,4 @@
+import Layout from "@/components/layout";
 import { HeroSection } from "@/components/hero-section";
 import { BrandsSection } from "@/components/brands-section";
 import { ServicesSection } from "@/components/services-section";
@@ -6,7 +7,6 @@ import { ArchitectProfileSection } from "@/components/architect-profile-section"
 import { OurStorySection } from "@/components/our-story-section";
 import { NewsSection } from "@/components/news-section";
 import { PortfolioSection } from "@/components/portfolio-section";
-import Layout from "@/components/layout";
 
 export default function Home() {
   return (
