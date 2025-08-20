@@ -33,7 +33,9 @@ export function Card({
       {date ? (
         <div className="mt-4 flex items-center gap-4 lg:mt-8">
           <div className="grid gap-1">
-            <span className="text-xl font-semibold">{date}</span>
+            <span className="text-xl font-semibold md:text-2xl xl:text-3xl">
+              {date}
+            </span>
             <span className="font-semibold">{month}</span>
           </div>
           <h3 className="font-semibold">{title}</h3>
