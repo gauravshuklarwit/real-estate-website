@@ -38,6 +38,9 @@ importers:
       react-fast-marquee:
         specifier: ^1.6.5
         version: 1.6.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-scroll-into-view:
+        specifier: ^2.1.3
+        version: 2.1.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -1711,6 +1714,12 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-scroll-into-view@2.1.3:
+    resolution: {integrity: sha512-8RQSkOQELwV4E3AtRwbOGn5SkTkt7+63TZ51RJzvcuSUVNMAE+RzMikf1DGyAL2o6LnRHg/1Eg4cJJMdId6kHA==}
+    peerDependencies:
+      react: '>=16.5.2'
+      react-dom: '>=16.5.2'
 
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
@@ -3632,6 +3641,11 @@ snapshots:
       react-dom: 19.1.0(react@19.1.0)
 
   react-is@16.13.1: {}
+
+  react-scroll-into-view@2.1.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   react@19.1.0: {}
 

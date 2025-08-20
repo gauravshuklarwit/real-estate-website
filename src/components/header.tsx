@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
+import ScrollIntoView from "react-scroll-into-view";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -15,7 +15,7 @@ interface NavLink {
 }
 
 const navlinks: NavLink[] = [
-  { label: "Home", link: "/" },
+  { label: "Home", link: "#header" },
   { label: "Services", link: "#services-section" },
   { label: "Find a Team", link: "#architect-profile-section" },
   { label: "About Us", link: "#our-story-section" },
@@ -30,8 +30,6 @@ export function Header({ className }: { className?: string }) {
   const handleMobileNav = () => {
     setIsmMenuToggled((prev) => !prev);
   };
-
-  const pathname = usePathname();
 
   return (
     <header
@@ -86,7 +84,7 @@ export function Header({ className }: { className?: string }) {
 
           {/* Mobile navigation menu */}
           <ul className="grid justify-items-center gap-4">
-            {navlinks.map((navLink, idx) => {
+            {navlinks?.map((navLink, idx) => {
               return (
                 <motion.li
                   key={navLink?.label}
@@ -98,18 +96,13 @@ export function Header({ className }: { className?: string }) {
                   transition={{ duration: 0.3, delay: idx * 0.08 }}
                 >
                   {navLink?.label && (
-                    <Link
-                      href={navLink?.link || "/"}
-                      className={cn(
-                        "text-muted-foreground hover:text-background text-xl transition-colors sm:text-2xl",
-                        {
-                          "text-background": navLink?.link === pathname,
-                        },
-                      )}
+                    <ScrollIntoView
+                      selector={navLink?.link || "#"}
+                      className="text-muted-foreground hover:text-background text-xl transition-colors sm:text-2xl"
                       onClick={handleMobileNav}
                     >
-                      {navLink.label}
-                    </Link>
+                      {navLink?.label}
+                    </ScrollIntoView>
                   )}
                 </motion.li>
               );
@@ -119,21 +112,16 @@ export function Header({ className }: { className?: string }) {
 
         {/* Desktop navigation */}
         <ul className="ml-auto hidden items-center gap-8 px-4 py-8 lg:flex xl:gap-15">
-          {navlinks.map((navLink) => {
+          {navlinks?.map((navLink) => {
             return (
               <li key={navLink?.label}>
                 {navLink?.label && (
-                  <Link
-                    href={navLink?.link || "/"}
-                    className={cn(
-                      "text-muted-foreground hover:text-background focus-within:text-background transition-colors",
-                      {
-                        "text-background": navLink?.link === pathname,
-                      },
-                    )}
+                  <ScrollIntoView
+                    selector={navLink?.link || "#"}
+                    className="text-muted-foreground hover:text-background focus-within:text-background cursor-pointer transition-colors"
                   >
-                    {navLink.label}
-                  </Link>
+                    {navLink?.label}
+                  </ScrollIntoView>
                 )}
               </li>
             );
