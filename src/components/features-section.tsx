@@ -43,7 +43,7 @@ export function FeaturesSection() {
           description="Check out our best service you can possibly orders in building your company and don't forget to ask via our email or our customer service if you are interested in using our services"
         />
 
-        <div className="grid gap-13 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-13 md:grid-cols-2 md:gap-y-14 xl:grid-cols-4">
           {features?.map((feature) => {
             const Icon = feature?.icon;
 
@@ -52,10 +52,10 @@ export function FeaturesSection() {
                 key={feature?.title}
                 className="group flex flex-col max-md:items-center max-md:text-center"
               >
-                <h3 className="mt-6.5 text-xl font-semibold md:mt-9 lg:text-2xl">
+                <h3 className="mt-6.5 text-xl font-semibold lg:mt-9 lg:text-2xl">
                   {feature?.title}
                 </h3>
-                <p className="paragraph mt-3 lg:mt-6">{feature?.description}</p>
+                <p className="paragraph mt-3 xl:mt-6">{feature?.description}</p>
                 {Icon && (
                   <span className="bg-primary before:bg-primary/50 relative -order-1 grid aspect-square size-14 place-content-center rounded-full transition-all duration-200 group-hover:rotate-z-30 before:absolute before:inset-0 before:-z-10 before:size-full before:scale-125 before:rounded-full before:content-[''] sm:size-16 xl:size-18.5">
                     <Icon className="size-6 xl:size-8" />
