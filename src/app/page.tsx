@@ -6,20 +6,23 @@ import { ArchitectProfileSection } from "@/components/architect-profile-section"
 import { OurStorySection } from "@/components/our-story-section";
 import { NewsSection } from "@/components/news-section";
 import { PortfolioSection } from "@/components/portfolio-section";
+import Layout from "@/components/layout";
 
 export default function Home() {
   return (
     <>
-      <main>
-        <HeroSection />
-        <BrandsSection />
-        <ServicesSection />
-        <FeaturesSection />
-        <ArchitectProfileSection />
-        <OurStorySection />
-        <NewsSection />
-        <PortfolioSection />
-      </main>
+      <Layout>
+        <main>
+          <HeroSection />
+          <BrandsSection />
+          <ServicesSection />
+          <FeaturesSection />
+          <ArchitectProfileSection />
+          <OurStorySection />
+          <NewsSection />
+          <PortfolioSection />
+        </main>
+      </Layout>
     </>
   );
 }
