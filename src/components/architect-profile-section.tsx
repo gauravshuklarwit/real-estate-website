@@ -23,7 +23,7 @@ export function ArchitectProfileSection() {
               alt="Architect avatar"
               width={100}
               height={100}
-              className="size-16"
+              className="size-16 md:size-20 lg:size-25"
             />
             <p className="mt-3 text-xl font-semibold">Dianne Russell</p>
             <p className="text-center leading-relaxed text-[#E5E5E5] max-sm:text-sm">
