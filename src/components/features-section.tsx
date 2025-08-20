@@ -2,7 +2,7 @@ import { SectionIntro } from "@/components/section-intro";
 import { Icons } from "@/components/icons";
 
 interface Feature {
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   title?: string;
   description?: string;
 }
