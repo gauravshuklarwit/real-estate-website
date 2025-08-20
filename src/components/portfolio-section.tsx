@@ -49,7 +49,7 @@ export function PortfolioSection() {
           {projects?.map((project) => (
             <li
               key={project?.title}
-              className="group relative lg:overflow-y-hidden"
+              className="group relative shadow-md lg:overflow-y-hidden"
             >
               <div className="relative min-h-120 overflow-hidden">
                 <Image
