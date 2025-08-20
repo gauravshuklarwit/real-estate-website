@@ -85,7 +85,7 @@ export function HeroSection({ className }: { className?: string }) {
           </ul>
 
           {/* Floating box */}
-          <div className="relative z-10 flex flex-col flex-wrap gap-6 px-8 py-9 after:absolute after:inset-0 after:-z-10 after:bg-gradient-to-b after:from-[#2A92CD] after:to-[#003756] after:content-[''] sm:flex-row sm:gap-10 lg:after:bg-gradient-to-r xl:after:w-[52vw]">
+          <div className="xl:drop-shadow-primary/30 relative z-10 flex flex-col flex-wrap gap-6 px-8 py-9 after:absolute after:inset-0 after:-z-10 after:bg-gradient-to-b after:from-[#2A92CD] after:to-[#003756] after:content-[''] sm:flex-row sm:gap-10 lg:after:bg-gradient-to-r xl:drop-shadow-xl xl:after:w-[52vw]">
             <div>
               <span>General</span>
               <p className="mt-2 text-xl font-semibold">Project</p>
