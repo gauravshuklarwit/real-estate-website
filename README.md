@@ -22,6 +22,11 @@ This is a modern real estate website built with [Next.js](https://nextjs.org), d
 - Embla Carousel (for testimonials)
 - TypeScript
 
+### Links
+
+- Live site link: [https://real-estate-website-gshukla.vercel.app](https://real-estate-website-gshukla.vercel.app)
+- Source code: [https://github.com/gauravshuklarwit/real-estate-website](https://github.com/gauravshuklarwit/real-estate-website)
+
 ## Getting Started
 
 First, clone the repository:
