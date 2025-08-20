@@ -14,7 +14,7 @@ export function ArchitectProfileSection() {
             alt="Architecture image"
             width={535}
             height={570}
-            className="col-[1/-2] row-[1/-2] size-full object-cover sm:row-[1/-1]"
+            className="col-[1/-2] row-[1/-2] size-full object-cover shadow sm:row-[1/-1]"
           />
 
           <div className="text-background z-10 col-[2/-1] row-[3/-1] mt-auto grid max-h-fit justify-items-center gap-2 bg-gradient-to-br from-[#474747] to-[#222222] px-4 py-8 shadow-2xl sm:col-[3/-1] sm:row-[2/-2] sm:my-auto">

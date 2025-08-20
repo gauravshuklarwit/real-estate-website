@@ -22,7 +22,7 @@ export function OurStorySection() {
         </div>
 
         {/* Image box */}
-        <div className="relative -order-1 border-16 border-transparent shadow lg:order-1">
+        <div className="relative -order-1 border-16 border-transparent shadow-lg lg:order-1">
           <Image
             src="/our-story.jpg"
             alt="Our story image"
