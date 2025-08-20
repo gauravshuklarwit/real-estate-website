@@ -26,9 +26,15 @@ const navlinks: NavLink[] = [
 
 export function Header({ className }: { className?: string }) {
   const [isMenuToggled, setIsmMenuToggled] = useState(false);
+  const [activeLink, setActiveLink] = useState<string | undefined>("Home");
 
   const handleMobileNav = () => {
     setIsmMenuToggled((prev) => !prev);
+  };
+
+  const handleNavClick = (label?: string) => {
+    setActiveLink(label);
+    if (isMenuToggled) handleMobileNav();
   };
 
   return (
@@ -98,8 +104,13 @@ export function Header({ className }: { className?: string }) {
                   {navLink?.label && (
                     <ScrollIntoView
                       selector={navLink?.link || "#"}
-                      className="text-muted-foreground hover:text-background text-xl transition-colors sm:text-2xl"
-                      onClick={handleMobileNav}
+                      className={cn(
+                        "cursor-pointer text-xl transition-colors sm:text-2xl",
+                        activeLink === navLink.label
+                          ? "text-background"
+                          : "text-muted-foreground hover:text-background",
+                      )}
+                      onClick={() => handleNavClick(navLink.label)}
                     >
                       {navLink?.label}
                     </ScrollIntoView>
@@ -118,7 +129,13 @@ export function Header({ className }: { className?: string }) {
                 {navLink?.label && (
                   <ScrollIntoView
                     selector={navLink?.link || "#"}
-                    className="text-muted-foreground hover:text-background focus-within:text-background cursor-pointer transition-colors"
+                    className={cn(
+                      "cursor-pointer transition-colors",
+                      activeLink === navLink.label
+                        ? "text-background"
+                        : "text-muted-foreground hover:text-background",
+                    )}
+                    onClick={() => handleNavClick(navLink.label)}
                   >
                     {navLink?.label}
                   </ScrollIntoView>
