@@ -1,5 +1,5 @@
-import { SectionIntro } from "@/components/section-intro";
 import { Card } from "@/components/card";
+import { SectionIntro } from "@/components/section-intro";
 
 interface Service {
   title?: string;
