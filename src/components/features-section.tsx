@@ -52,7 +52,7 @@ export function FeaturesSection() {
                 key={feature?.title}
                 className="group flex flex-col max-md:items-center max-md:text-center"
               >
-                <h3 className="mt-6.5 text-xl font-semibold sm:text-2xl md:mt-9">
+                <h3 className="mt-6.5 text-xl font-semibold md:mt-9 lg:text-2xl">
                   {feature?.title}
                 </h3>
                 <p className="paragraph mt-3 lg:mt-6">{feature?.description}</p>

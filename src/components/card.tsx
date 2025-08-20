@@ -41,7 +41,7 @@ export function Card({
           <h3 className="font-semibold">{title}</h3>
         </div>
       ) : (
-        <h3 className="mt-5 text-xl font-semibold md:text-2xl xl:mt-8 xl:text-3xl">
+        <h3 className="mt-5 text-xl font-semibold lg:text-2xl xl:mt-8 xl:text-3xl">
           {title}
         </h3>
       )}
