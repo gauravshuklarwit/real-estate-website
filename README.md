@@ -24,8 +24,6 @@ This is a modern real estate website built with [Next.js](https://nextjs.org), d
 
 ## Getting Started
 
-## Getting Started
-
 First, clone the repository:
 
 ```bash
